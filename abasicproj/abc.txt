@@ -1,0 +1,10 @@
+1 let us write some content in this file.
+2 this file is abc.txt in project directory.
+3 lkjsdf
+4 sd;lkgjdflkj
+5 ;lkejtlkerjg
+6 erlktkjer
+7 elkrktj
+8 relkjerjt
+9 lerkjtrekltjr
+10 elrktjrelktjre
