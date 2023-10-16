@@ -3,19 +3,33 @@ package stream;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.IntSummaryStatistics;
 import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Optional;
 import java.util.Random;
 import java.util.function.Consumer;
-import java.util.function.Supplier;
 import java.util.stream.Collectors;
-import java.util.stream.DoubleStream;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class StreamDemo {
 	public static void main(String[] args) {
+		Map<String,Integer> map = new HashMap<>();
+		map.put("ab", 23);
+		map.put("cd", 123);
+		map.put("ej", 243);
+		map.put("uwabc", 223);
+		map.put("abc", 283);
+		map.put("lkdsj", 213);
+		
+		Stream<Entry<String, Integer>> stream2 = map.entrySet().stream();
+		//find the person with max marks
+		Optional<Entry<String, Integer>> maxOpt = 
+				stream2.max((e1,e2) -> e1.getValue() - e2.getValue());
+		System.out.println(maxOpt.get().getKey());
 		//on demand data structure
 		//can be used only once
 		List<Integer> list = new ArrayList<>();
