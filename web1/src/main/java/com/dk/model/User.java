@@ -3,6 +3,14 @@ package com.dk.model;
 public class User {
 	private String username;
 	private String password;
+	public String getDemo()
+	{
+		return "demo:" + username;
+	}
+	public void setDemo(String demo)
+	{
+		
+	}
 	public User(String username, String password) {
 		super();
 		this.username = username;

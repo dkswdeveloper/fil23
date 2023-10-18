@@ -1,0 +1,56 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<%@ page import="java.util.List, com.dk.model.User" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h1> JSP Demo</h1>
+
+<% out.println(request.getAttribute("list")); %> <br>
+${list } <br>
+request, session, application, page 
+Expression Language <br>
+
+<c:if test="${list.size() > 10}"> 
+	You have a list of data <br> 
+</c:if>
+<h3> Users</h3>
+<ol>
+<c:forEach items="${users }" var="myvar" varStatus="index">
+<li>User with name = ${myvar.username }, password = ${myvar.password }
+, ${myvar.demo }
+</li> 
+</c:forEach>
+</ol>
+<ol>
+<% List<User> users = (List<User>)request.getAttribute("users");
+	for(User user : users)
+	{
+		out.println("<li>" + "user with name " + user.getUsername() + 
+				" and password " + user.getPassword() + "</li>");
+	}
+%>
+</ol>
+
+
+
+
+<%@ include file="menu.jsp" %>
+<jsp:include page="menu.jsp"></jsp:include>
+
+<% int x; 
+int y;
+x = 5; y = 4;
+out.println("<p> " + (x+y) + "</p>") ; 
+%>
+<%= "<p> " + (x+y) + "</p>" %>
+<%! int count = 101; %>
+<p> You are visitor number <%= count++ %> </p>
+
+</body>
+</html>
