@@ -52,5 +52,46 @@ out.println("<p> " + (x+y) + "</p>") ;
 <%! int count = 101; %>
 <p> You are visitor number <%= count++ %> </p>
 
+<%-- 
+<a href="deleteMessage?msgid=${msgid }">Delete</a>
+
+<ol>
+	<c:forEach items="${messages }" var="msg">
+	<li> ${msg.id }, ${msg.to }, ${msg.from } 
+		<form action="deleteMessage" method="post">
+			<input type="submit" value="Delete"/>
+			<input type="hidden" name="msgid" value="${msg.id }" />
+		</form>
+	 </li>
+</c:forEach>
+</ol>
+ --%>
+ http://localhost:8080/web1/deleteMessage?msgid=101
+<ol>
+	<li> 1, dinesh, abhimanyu, message app,
+	<form action="deleteMessage" method="get">
+			<input type="submit" value="Delete"/>
+			<input type="hidden" name="msgid" value="101" />
+		</form>
+	</li>
+	<li> 2, dinesh, abhimanyu, message web app,
+	<form action="deleteMessage" method="get" id=">
+			<input type="submit" value="Delete"/>
+			<input type="hidden" name="msgid" value="102" />
+		</form>
+	</li>
+	
+</ol>
+<a href="deleteMessage?id=502" > <button>Delete</button></a>
+
+
+
+
+
+
+
+
+
+
 </body>
 </html>
