@@ -1,0 +1,58 @@
+2023-10-20 16-08-20 ERROR Connection leak detected: there are 1 unclosed connections upon shutting down pool jdbc:mysql://localhost:3306/fil23
+ 2023-10-20 16-08-20 ERROR Connection leak detected: there are 1 unclosed connections!
+ 2023-10-20 16-19-15 ERROR could not read a hi value
+ java.sql.SQLSyntaxErrorException: Table 'fil23.hibernate_sequence' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:916)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:972)
+	at org.hibernate.id.enhanced.TableStructure.executeQuery(TableStructure.java:220)
+	at org.hibernate.id.enhanced.TableStructure.access$300(TableStructure.java:45)
+	at org.hibernate.id.enhanced.TableStructure$1$1.execute(TableStructure.java:142)
+	at org.hibernate.id.enhanced.TableStructure$1$1.execute(TableStructure.java:130)
+	at org.hibernate.jdbc.WorkExecutor.executeReturningWork(WorkExecutor.java:55)
+	at org.hibernate.jdbc.AbstractReturningWork.accept(AbstractReturningWork.java:34)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:57)
+	at org.hibernate.id.enhanced.TableStructure$1.getNextValue(TableStructure.java:129)
+	at org.hibernate.id.enhanced.NoopOptimizer.generate(NoopOptimizer.java:40)
+	at org.hibernate.id.enhanced.SequenceStyleGenerator.generate(SequenceStyleGenerator.java:534)
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:115)
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:185)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:128)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:55)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:107)
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:760)
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:746)
+	at com.dk.Main.main(Main.java:32)
+2023-10-20 16-19-15 ERROR Table 'fil23.hibernate_sequence' doesn't exist
+ 2023-10-20 16-19-15 ERROR Connection leak detected: there are 1 unclosed connections upon shutting down pool jdbc:mysql://localhost:3306/fil23
+ 2023-10-20 16-19-15 ERROR Connection leak detected: there are 1 unclosed connections!
+ 2023-10-20 16-21-55 ERROR Unknown column 'student0_.email' in 'field list'
+ 2023-10-20 16-25-19 ERROR could not read a hi value
+ java.sql.SQLSyntaxErrorException: Table 'fil23.hibernate_sequence' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:916)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:972)
+	at org.hibernate.id.enhanced.TableStructure.executeQuery(TableStructure.java:220)
+	at org.hibernate.id.enhanced.TableStructure.access$300(TableStructure.java:45)
+	at org.hibernate.id.enhanced.TableStructure$1$1.execute(TableStructure.java:142)
+	at org.hibernate.id.enhanced.TableStructure$1$1.execute(TableStructure.java:130)
+	at org.hibernate.jdbc.WorkExecutor.executeReturningWork(WorkExecutor.java:55)
+	at org.hibernate.jdbc.AbstractReturningWork.accept(AbstractReturningWork.java:34)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:57)
+	at org.hibernate.id.enhanced.TableStructure$1.getNextValue(TableStructure.java:129)
+	at org.hibernate.id.enhanced.NoopOptimizer.generate(NoopOptimizer.java:40)
+	at org.hibernate.id.enhanced.SequenceStyleGenerator.generate(SequenceStyleGenerator.java:534)
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:115)
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:185)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:128)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:55)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:107)
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:760)
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:746)
+	at com.dk.Main.main(Main.java:32)
+2023-10-20 16-25-19 ERROR Table 'fil23.hibernate_sequence' doesn't exist
+ 2023-10-20 16-25-19 ERROR Connection leak detected: there are 1 unclosed connections upon shutting down pool jdbc:mysql://localhost:3306/fil23
+ 2023-10-20 16-25-19 ERROR Connection leak detected: there are 1 unclosed connections!
+ 
