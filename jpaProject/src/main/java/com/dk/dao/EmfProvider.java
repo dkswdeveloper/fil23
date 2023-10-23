@@ -14,6 +14,7 @@ public class EmfProvider {
 		log.debug("trying to connect to db");
 		try	
 		{
+			if(factory != null) return factory;
 			factory = Persistence.createEntityManagerFactory("fil23PU");
 			 log.info("emf created " + factory);
 			 return factory;

@@ -25,6 +25,7 @@ public class Project {
 
 	@OneToMany(mappedBy = "project",fetch = FetchType.EAGER)
 //	@OneToMany(mappedBy = "project",fetch = FetchType.LAZY)
+	
 	private List<Student> students = new ArrayList<>();
 	
 	public List<Student> getStudents() {
