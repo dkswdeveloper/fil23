@@ -17,6 +17,7 @@ public class StudentServiceImpl implements StudentService {
 	@Autowired
 	private StudentRepository studentRepository;
 	
+	
 	@Override
 	public Student getStudent(int sid) {
 		Optional<Student> optional = studentRepository.findById(sid);
@@ -38,6 +39,11 @@ public class StudentServiceImpl implements StudentService {
 
 		//		em.getTransaction().commit();
 //		catch() { em.getTransaciton.rollback(); }
+	}
+
+	@Override
+	public List<Student> getAllByName(String name) {
+		return studentRepository.findByName(name);
 	}
 
 }

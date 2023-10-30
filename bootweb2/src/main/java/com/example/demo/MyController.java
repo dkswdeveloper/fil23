@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.CookieValue;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -94,12 +95,7 @@ public class MyController {
 		model.put("student", student);
 		return "showstudent";
 	}
-	@GetMapping("/students")
-	@ResponseBody
-	public List<Student> findAll()
-	{
-		return studentService.getAll();
-	}
+	
 	@ResponseBody
 	@GetMapping("/allparams")
 	public String getAllParams(ModelMap model, 

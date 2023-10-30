@@ -13,6 +13,18 @@ import com.example.demo.repo.StudentRepository;
 @Controller
 public class HelloController {
 	
+	/*
+	 * url : https://paytm.com/9898989865/account
+	 * https://paytm.com/9898989865/customers : all in json
+	 * https://paytm.com/9898989865/customers/{id}
+	 * GET , POST, PUT DEELTE, PATCH, 
+	 * POST : CREATE NEW RESOURCE AT SERVER
+	 * PUT : UPDATE THE RESOURCE AT SERVER
+	 * PATCH : UPDATE PART OF RESOURCE
+	 * DELETE : DELETE THE RESOURCE
+	 * 
+	 */
+	
 	@Autowired
 	private StudentRepository studentRepository;
 	
