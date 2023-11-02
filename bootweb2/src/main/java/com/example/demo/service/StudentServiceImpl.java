@@ -21,7 +21,9 @@ public class StudentServiceImpl implements StudentService {
 	@Override
 	public Student getStudent(int sid) {
 		Optional<Student> optional = studentRepository.findById(sid);
-		return optional.orElse(new Student(0,"Dummy", 0, "0000000"));
+		if( ! optional.isPresent() )
+			throw new RuntimeException("student with id " + sid + " not found");
+		return optional.get();
 	}
 
 	@Override
